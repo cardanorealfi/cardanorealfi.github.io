@@ -5,239 +5,212 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stylesheets/styles.css">
-    <link rel="stylesheet" href="./stylesheets/reset.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap" rel="stylesheet">
     <title>Cardano RealFi Consortium</title>
 </head>
 <body>
-    <section>
-        <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
-            <div class="container">
-                <a href="#">
-                    <img 
-                        src="./assets/CRFC-logo.png" alt="CRFC-logo-transparent-bg"
-                        class="nav-logo"    
-                    >
-                </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto text-end mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#about-us">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#members">Members</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#resources">Resources</a>
-                  </li>
+    <header>
+        <div class="container row">
+            <button class="nav-toggle" aria-label="open navigation">
+                <span class="hamburger"></span>
+            </button>
+            <a href="#home">
+                <img 
+                    src="./assets/CRFC-logo.png" alt="CRFC-logo-transparent-bg"
+                    class="logo" 
+                >
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#members">Members</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#resources">Resources</a></li>
                 </ul>
-              </div>
-            </div>
-          </nav>
-    </section>
+            </nav>
+        </div>
+    </header>
 
     <!-- Home -->
 
-    <section id="home" class="background-image vh-100 d-flex flex-column justify-content-center align-items-center">
-        <div class="overlay"></div>
-        <div class="centered">
-            <img src="./assets/CRFC-logo.png" alt="CRFC-logo" class="CRFC-logo">
+    <section class="hero" id="home">
+        <span id="home" class="anchor"></span>
+        <div class="container">
+            <div class="logo__container">
+                    <img src="./assets/CRFC-logo.png" alt="CRFC-logo" class="logo--hero">
+            </div>
         </div>
     </section>
 
     <!-- About Us -->
 
-    <section id="about-us" class="m-5 d-flex flex-column align-items-end">
-        <div class="container p-1">
-            <h2 class="display-2 fw-bold text-center">About Us</h2>
-        </div>
-        <div class="container p-1 my-5">
-            <h3 class="display-3">
-                Welcome!
-            </h3>
-            <p>We are an independent collective of RealFi projects that create value and trust by connecting real world assets and processes to transactions and tokens on the Cardano blockchain.</p>
-            <p>The CRFC is an open and permissionless organization that models and advances decentralization principles.</p>
-            <p>We hold bi-weekly planning meetings and have organised the following working groups:</p>
-            <ol>
-                <li>Identity & Trust</li>
-                <li>Fiat Conversion</li>
-                <li>Document Verification</li>
-                <li>Governance & Membership</li>
-                <li>Outreach & Marketing</li>
-            </ol>
-            <p>Find out more in our <a style="color: #000;" href="#resources">Resources</a> section.
+    <section class="about" id="about">
+        <span id="about" class="anchor"></span>
+        <div class="container row">
+            <div class="col">
+                <h2 class="heading">About Us</h2>
+                <p class="about__text">We are an independent collective of RealFi projects that create value and trust by connecting real world assets and processes to transactions and tokens on the Cardano blockchain.</p>
+                <p class="about__text">The CRFC is an open and permissionless organization that models and advances decentralization principles.</p>
+                <p class="about__text">We hold bi-weekly planning meetings and have organised the following working groups:</p>
+                <ul class="list">
+                    <li class="item">Identity & Trust</li>
+                    <li class="item">Fiat Conversion</li>
+                    <li class="item">Document Verification</li>
+                    <li class="item">Governance & Membership</li>
+                    <li class="item">Outreach & Marketing</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <!-- Members -->
-
-    <section id="members" class="mx-5">
-        <div class="container pb-5">
-            <h2 class="display-2 fw-bold text-center">Members</h2>
-        </div>
-
-        <div class="grid-container container-fluid d-flex justify-content-center">
-
-            <section class="row">
-                <div 
-                class="col-12 col-sm-6 col-md-4 grid-item"
-                onclick='window.location.href="https://landano.io"'
-                >
-                <img class="img-fluid p-4" src="./assets/member-logos/Landano-logo.png" alt="">
-                </div> 
-                
-                <div 
-                class="col-12 col-sm-6 col-md-4 grid-item"
-                onclick='window.location.href="https://newm.io"'>
-                    <img class="img-fluid p-4" src="./assets/member-logos/Newm-logo.png" alt="">
-                </div> 
-                
-                <div 
-                class="col-12 col-sm-6 col-md-4 grid-item"
-                    onclick='window.location.href="https://commonlands.org"'    
-                    >
-                    <img class="img-fluid p-4" src="./assets/member-logos/Commonlands-logo.png" alt="">
+    <section class="members" id="members">
+        <div class="container">
+            <h2 class="heading">Members</h2>
+            <section class="members__section">
+                <div class="member__item">
+                    <a href="https://landano.io" target="_blank">
+                        <img class="member__img" src="./assets/landano-logo-square.png" alt="Landano notarizes land right records as Cardano NFTs">
+                    </a>
                 </div>
-                
-                <div class="w-100"></div> 
-                
-                <div 
-                class="col-12 col-sm-6 col-md-4 grid-item"
-                onclick='window.location.href="https://directed.dev"'    
-                >
-                    <img class="img-fluid p-4" src="./assets/member-logos/DirectEd-logo.png" alt="">
-                </div> 
-            
-                <div 
-                class="col-12 col-sm-6 col-md-4 grid-item"
-                onclick='window.location.href="https://gokey.network/"'    
-                >
-                    <img class="img-fluid p-4" src="./assets/member-logos/GoKey-logo.png" alt="">
-                </div> 
-                <div 
-                    class="col-12 col-sm-6 col-md-4 grid-item"
-                    onclick='window.location.href="https://orcfax.link/"'    
-                    >
-                    <img class="img-fluid p-4" src="./assets/member-logos/Orcfax-logo.png" alt="">
+                <div class="member__item">
+                    <a href="www.newm.io" target="_blank">
+                        <img class="member__img" src="./assets/NEWM_Logo.png" alt="NEWM splits music intellectual property rights to bring artists and fans together">
+                    </a>
                 </div>
-
-            <div class="w-100"></div>
-
-                <div 
-                class="col-12 col-sm-6 col-md-4 grid-item"
-                onclick='window.location.href=" https://iamx.id/"'>
-                    <img class="img-fluid p-4" src="./assets/member-logos/Iamx-logo.png" alt="">
-                </div> 
-
-                <div 
-                class="col-12 col-sm-6 col-md-4 grid-item"
-                onclick='window.location.href="https://www.reitcircles.com/"'>
-                    <img class="img-fluid p-4" src="./assets/member-logos/REITCircles-logo.png" alt="">
+                <div class="member__item">
+                    <a href="www.commonlands.org" target="_blank">
+                        <img class="member__img" src="./assets/Commonlands-Logo-Large-Transparent.png" alt="Commonlands issues land claim credentials for unbanked/underbanked">
+                    </a>
                 </div>
-
-                <div 
-                class="col-12 col-sm-6 col-md-4 grid-item"
-                onclick='window.location.href="https://sites.google.com/terrafirma.co.mz/cavateco/cavateco"'>
-                    <img class="img-fluid p-4" src="./assets/member-logos/TerraFirma-logo.png" alt="">
-                </div> 
-
-                
-
-            <div class="w-100"></div>
-
-            <div 
-            class="col-12 col-sm-6 col-md-4 grid-item"
-            onclick='window.location.href=" https://algaetoken.com"'>
-                <img class="img-fluid p-4" src="./assets/member-logos/AlgaeToken-logo.png" alt="">
-            </div> 
-
-            <div 
-            class="col-12 col-sm-6 col-md-4 grid-item"
-            onclick='window.location.href=" https://smartcentral.io"'>
-                <img class="img-fluid p-4" src="./assets/member-logos/SmartCentral-logo.png" alt="">
-            </div> 
-
-            <div 
-            class="col-12 col-sm-6 col-md-4 grid-item"
-            onclick='window.location.href="https://resi.works/"'>
-                <img class="img-fluid p-4" src="./assets/member-logos/LivingGreen-logo.png" alt="">
-            </div>
-
-            <div class="w-100"></div>
-       
-            <div 
-            class="col-12 col-sm-6 col-md-4 grid-item"
-            onclick='window.location.href=" https://earthtrust.life/"'>
-                <img class="img-fluid p-4" src="./assets/member-logos/EarthTrust-logo.png" alt="">
-            </div>
-
-            <div 
-            class="col-12 col-sm-6 col-md-4 grid-item"
-            onclick='window.location.href=" https://xerberus.net/"'>
-                <img class="img-fluid p-4" src="./assets/member-logos/Xerberus-logo.png" alt="">
-            </div>
-
-            <div 
-            class="col-12 col-sm-6 col-md-4 grid-item"
-            onclick='window.location.href=" https://impactscope.com/"'>
-                <img class="img-fluid p-4" src="./assets/member-logos/ImpactScope-logo.png" alt="">
-            </div>
-
-        </section>
-    </div>
-</section>
-
-<!-- Resources -->
-
-<section id="resources">
-    <div class="container p-5">
-        <h2 class="display-2 fw-bold text-center">Resources</h2>
-        <div class="d-flex flex-column align-items-center justify-content-center embed-responsive embed-responsive-4by3 my-5">
-            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/hVhZgSYpUQY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="member__item">
+                    <a href="https://directed.dev/" target="_blank">
+                        <img class="member__img" src="./assets/logo-395241.png" alt="DirectEd Development Foundation directs donations for educations in sub-Saharan Africa">
+                    </a>
+                </div>
+                <div class="member__item">
+                    <a href="https://gokey.network/" target="_blank">
+                        <img class="member__img" src="https://gokey.network/wp-content/uploads/thegem-logos/logo_0393d270c898b217dacee09ca62411b4_2x.png" alt="">
+                    </a>
+                </div>
+                <div class="member__item">
+                    <a href="https://www.orcfax.link/" target="_blank">
+                        <img class="member__img" src="https://real-fi.org/assets/member-logos/Orcfax-logo.png" alt="">
+                    </a>
+                </div>
+                <div class="member__item">
+                    <a href="https://iamx.id" target="_blank">
+                        <img class="member__img" src="./assets/IAMX_Logo_OYI.png" alt="IAMX provides digital identity and KYC services">
+                    </a>
+                </div>
+                <div class="member__item">
+                    <a href="https://www.reitcircles.com" target="_blank">
+                        <img class="member__img" src="./assets/logo_reitcircles_32x32.png" alt="Reticirlces' protocol allows home owners to the blockchain and issue tokens to interested buyers">
+                    </a>
+                </div>
+                <div class="member__item">
+                    <a href="https://sites.google.com/terrafirma.co.mz/cavateco/cavateco" target="_blank">
+                        <img class="member__img" src="./assets/TerraFirmaLogo.jpeg" alt="Independent and decentralised register of land rights">
+                    </a>
+                </div>
+                <div class="member__item">
+                    <a href="https://algaetoken.com/" target="_blank">
+                        <img class="member__img" src="./assets/Algae-Token-Logo.png" alt="Algae token brings sustainable algae farming to the blockchain">
+                    </a>
+                </div>
+                <div class="member__item">
+                    <a href="https://smartcentral.io" target="_blank">
+                        <img class="member__img" src="./assets/Oceidon-SMART-Score-Logo.png" alt="Oceidon SMART Score is a system that distills complex blockchain data into a singular, actionable behaviour score">
+                    </a>
+                </div>
+                <div class="member__item">
+                    <a href="https://resi.works/" target="_blank">
+                        <img class="member__img" src="./assets/LGUF-Logos.png" alt="Urban farms' tool captures IoT and manual entry data for urban farming">
+                    </a>
+                </div>
+                <div class="member__item">
+                    <a href="www.earthtrust.life" target="_blank">
+                        <img class="member__img" src="./assets/et-logo1.png" alt="Earth Trust is building a radically transparent verification network">
+                    </a>
+                </div>
+                <div class="member__item">
+                    <a href="www.xerberus.io" target="_blank">
+                        <img class="member__img" src="./assets/Graph-Fuse-circle.png" alt="Xerberus evaluates on-chain and off-chain blockchain risk">
+                    </a>
+                </div>
+                <div class="member__item">
+                    <a href="https://impactscope.com/" target="_blank">
+                        <img class="member__img" src="./assets/impact-scope-logo.png" alt="Impact scope develops methodologies and tools for social enterprises, leveraging Web3 to create a sustainable impact.">
+                    </a>
+                </div>
+                <div class="member__item">
+                    <a href="www.tokenallies.com" target="_blank">
+                        <img class="member__img" src="./assets/Token-Allies-Coms.png" alt="Token allies is a crowdfunding platform that aims to fund real world projects">
+                    </a>
+                </div>
+                <div class="member__item" target="_blank">
+                    <a href="https://www.zengate.global/products/palmyra-comdex">
+                        <img class="member__img" src="./assets/Logo-Icon_(Black_and_blue).png" alt="Zengate is a tokenized commodity exchange focused on emerging markets and wholesale businesses">
+                    </a>
+                </div>
+            </section>
         </div>
-        <div class="d-flex justify-content-around resource-links my-5">
-            <a role="button" class="btn btn-primary" aria-disabled="false" href="https://github.com/cardanorealfi/charter-documents/blob/main/mission-statement.md">
-                Mission Statement <span class="badge badge-light">🎯</span>
-            </a>
-            <a role="button" class="btn btn-primary" aria-disabled="false" href="https://github.com/cardanorealfi/charter-documents/blob/main/rules.md">
-                CFRC rules <span class="px-4 badge badge-light">📏</span>
-            </a>
-        </div>
-        
-        
-        
-</section>
+    </section>
+
+
+    <!-- Resources -->
+
+    <section id="resources">
+        <div class="container">
+            <h2 class="heading">Resources</h2>
+            <div class="iframe-container">
+                <iframe 
+                width="560" 
+                height="315" src="https://www.youtube.com/embed/hVhZgSYpUQY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen
+                loading="lazy"
+                >
+            </iframe>
+            </div>
+            <ul class="list">
+                <li class="item">
+                    <a href="https://github.com/cardanorealfi/charter-documents/blob/main/mission-statement.md" class="item__link">
+                        Mission statement <span>🎯</span> 
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="https://github.com/cardanorealfi/charter-documents/blob/main/mission-statement.md" class="item__link">
+                        CFRC rules 
+                        <span>📏</span>
+                    </a>
+                </li>
+            </ul>
+        </div>     
+    </section>
     
     <!-- Footer -->
-    <footer class="container p-4 hidden my-5">
-      <div class="d-flex align-items-center overflow-scroll justify-lg logos">
-          <div class="hidden logo">
-              <a href="https://www.linkedin.com/company/cardano-realfi-consortium/" target="_blank">
-                  <img class="mx-3" src="./assets/LinkedIn-Logos/LI-Logo.png" class="px-1" width="150">
-              </a>
-          </div>
-          <div class="hidden logo">
-              <a href="https://twitter.com/realficardano" target="_blank">
-                  <img class="mx-3" src="./assets/2021-Twitter-logo-blue.png" class="px-1" width="50">
-              </a>
-          </div>
-          <div class="hidden logo">
-              <a href="https://discord.gg/mzZbwdFgXp" target="_blank">
-                  <img class="mx-3 px-1" src="./assets/discord-logo-blue.png" width="150">
-              </a>
-          </div>
-      </div>
+    <footer>
+        <section class="container row">
+            <h2 class="heading hidden logo">Cardano RealFi Consortium</h2>
+            <div class="logo__container--footer">
+                <div>
+                    <a  class="hidden logo" href="https://www.linkedin.com/company/cardano-realfi-consortium/" target="_blank">
+                        <img src="./assets/LI-Logo.png" width="150">
+                    </a>
+                </div>
+                <div  >
+                    <a class="hidden logo" href="https://twitter.com/realficardano" target="_blank">
+                        <img src="./assets/2021-Twitter-logo-blue.png" width="50">
+                    </a>
+                </div>
+                <div>
+                    <a  class="hidden logo" href="https://discord.gg/mzZbwdFgXp" target="_blank">
+                        <img src="./assets/discord-logo-blue.png" width="150">
+                    </a>
+                </div>
+            </div>
+        </section>
     </footer>
-      
-      
-
     <script defer async src="./utils.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
