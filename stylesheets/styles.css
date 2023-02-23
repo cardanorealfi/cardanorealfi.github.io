@@ -1,19 +1,18 @@
 :root {
-    --primary-font: Oswald, sans-serif;
+    --primary-font: Roboto, sans-serif;
     --secondary-font: Montserrat, sans-serif;
-    --font-xxl: 90px;
-    --font-xl: 36px;
-    --font-lg: 30px;
-    --font-md: 24px;
-    --font-sm: 21px;
-    --font-xs: 18px;
-    --font-xxs: 16px;
+    --font-xl: 4.5em;
+    --font-lg: 3.75em;
+    --font-md: 3em;
+    --font-sm: 1.5em;
+    --font-xs: 1.125em;
+    --font-xxs: 1em;
     --color-darkest: #2e323f;
     --color-darker: #3b4050;
-    --color-dark: #6f737f;
+    --color-lightgrey: #D3D3D3;
     --color-light-md: #efefef;
     --color-light: #ffffff;
-    --color-highlight: #a59678;
+    --color-highlight: #000;
 }
 
 *,
@@ -26,6 +25,7 @@ body {
     margin: 0;
     font-family: var(--primary-font);
     font-size: var(--font-xxs);
+    background-color: var(--color-lightgrey);
     line-height: 1.6;
 }
 
@@ -39,7 +39,12 @@ section {
 
 .heading {
     color: var(--color-highlight);
-    font-size: var(--font-xl);
+    font-size: var(--font-md);
+    text-align: center;
+}
+
+.heading-secondary {
+    font-size: var(--font-sm);
 }
 
 .container {
@@ -126,7 +131,7 @@ header {
 
 .nav__link--button {
     background: var(--color-highlight);
-    color: var(--color-light);
+    color: var(--color-highlight);
     padding: .25em 1em;
     border-radius: 10em;
 }
@@ -143,8 +148,7 @@ header {
     height: 3rem;
     padding: 0em;
     border-radius: 50%;
-    background: var(--color-highlight);
-    color: var(--color-light);
+    background: var(--color-light);
     transition: opacity 250ms ease;
     position: absolute;
     left: 0;
@@ -167,7 +171,7 @@ header {
     display: block;
     margin: 0 auto;
     height: 3px;
-    background: var(--color-light);
+    background: var(--color-highlight);
 }
 
 .hamburger::before,
@@ -194,11 +198,12 @@ header {
     padding: 100px 0;
     background: no-repeat center/100% url('../assets/Earth.png') var(--color-light-md);
     position:relative;
-    top: 50px;
+    top: -50px;
     left: 0;
     bottom: 0;
     right: 0;
     overflow: auto;
+    min-height: 100vh;
 }
 
 .hero::before {
@@ -217,6 +222,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 700px;
 }
 
 .logo--hero {
@@ -228,7 +234,7 @@ header {
 /*********************** About ************************/
 
 .about {
-    background-color: var(--color-light-md);
+    margin: 0 2em;
 }
 
 .about__text {
@@ -237,21 +243,17 @@ header {
 
 /*********************** Members ************************/
 
-.members {
-    background-color: var(--color-darkest);
-}
-
 .members__section {
     margin: 2rem 0;
     display: grid;
-    grid-template-columns: repeat(2, 3fr);
+    grid-template-columns: repeat(1, 3fr);
     gap: 40px;
     justify-items: center;
     align-items: center;
 }
 
 .member__img {
-    max-width: 35vw;
+    max-width: 50vw;
 }
 
 /*********************** Resources ************************/
@@ -274,12 +276,14 @@ header {
 /*********************** Footer ************************/
 
 footer {
-    background-color: var(--color-darker);
+    height: auto;
 }
 
 .logo__container--footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .hidden {
@@ -297,16 +301,19 @@ footer {
     opacity: 1;
     filter: blur(0);
     transform: translate(0);
-    margin: 0 1em;
 }
 
-.logo:nth-child(2){
+.logo-footer {
+    max-width: 25vw;
+}
+
+.logo-footer:nth-child(2){
     transition-delay: 600ms;
 }
-.logo:nth-child(3){
+.logo-footer:nth-child(3){
     transition-delay: 700ms;
 }
-.logo:nth-child(4){
+.logo-footer:nth-child(4){
     transition-delay: 800ms;
 }
 
@@ -315,6 +322,16 @@ footer {
 @media(prefers-reduced-motion){
     .hidden {
         transition: none;
+    }
+}
+
+@media (min-width: 450px) {
+    .members__section {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .member__img {
+        max-width: 100%;
     }
 }
 
@@ -355,10 +372,15 @@ footer {
       align-items: center;
     }
 
+    .logo__container {
+        min-height: 900px;
+    }
+
     .members__section {
         display: grid;
         grid-template-columns: repeat(3, 3fr);
         gap: 40px;
+        justify-items: center;
         align-items: center;
     }
     .member__item {}
@@ -369,42 +391,13 @@ footer {
 }
 
 @media (min-width: 960px) {
-    .hero__text {
-      width: 62%;
-    }
   
     .hero__img {
       width: 32%;
       align-self: center;
       margin: 0;
     }
-  
-    .members__section {
-        display: grid;
-        grid-template-columns: repeat(4, 3fr);
-        gap: 40px;
-        justify-items: center;
-        align-items: center;
-    }
-
-    .member__img {
-        max-width: 15vw;
-    }
 }
 
-
-@media (min-width: 1200px){
-    .members__section {
-        /* display: grid; */
-        grid-template-columns: repeat(6, 3fr);
-        gap: 40px;
-        justify-items: stretch;
-        align-items: center;
-    }
-
-    .member__img {
-        max-width: 10vw;
-    }
-}
 
 
