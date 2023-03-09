@@ -34,17 +34,17 @@ img {
 }
 
 section {
-    padding: 4em 0;
+    padding-top: 8em;
 }
 
 .heading {
     color: var(--color-highlight);
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
     text-align: center;
 }
 
-.heading-secondary {
-    font-size: var(--font-sm);
+.sub-heading {
+    font-size: var(--font-xs);
 }
 
 .container {
@@ -195,13 +195,8 @@ header {
 /*********************** Hero ************************/
 
 .hero {
-    padding: 100px 0;
     background: no-repeat center/100% url('../assets/Earth.png') var(--color-light-md);
     position:relative;
-    top: -50px;
-    left: 0;
-    bottom: 0;
-    right: 0;
     overflow: auto;
     min-height: 100vh;
 }
@@ -222,7 +217,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 700px;
+    min-height: 100vh;
 }
 
 .logo--hero {
@@ -244,12 +239,12 @@ header {
 /*********************** Members ************************/
 
 .members__section {
-    margin: 2rem 0;
     display: grid;
     grid-template-columns: repeat(1, 3fr);
     gap: 40px;
     justify-items: center;
     align-items: center;
+    padding: 0;
 }
 
 .member__img {
@@ -257,6 +252,14 @@ header {
 }
 
 /*********************** Resources ************************/
+
+#resources {
+    padding-top: 0;
+}
+
+.heading-resources {
+    padding-bottom: 2em;
+}
 
 .iframe-container {
     overflow: hidden;
@@ -277,6 +280,13 @@ header {
 
 footer {
     height: auto;
+    padding-bottom: 3em;
+}
+
+.list-footer {
+    margin: 0 1rem;
+    padding: 4rem 0;
+    font-family: var(--secondary-font);
 }
 
 .logo__container--footer {
@@ -326,6 +336,15 @@ footer {
 }
 
 @media (min-width: 450px) {
+
+    .heading {
+        font-size: var(--font-md);
+    }
+    
+    .sub-heading {
+        font-size: var(--font-sm);
+    }
+
     .members__section {
         grid-template-columns: repeat(2, 2fr);
     }
@@ -371,10 +390,10 @@ footer {
       justify-content: space-between;
       align-items: center;
     }
-
-    .logo__container {
-        min-height: 900px;
-    }
+    /* 
+        .logo__container {
+            min-height: 900px;
+        } */
 
     .members__section {
         display: grid;
